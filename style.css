@@ -1,7 +1,8 @@
 :root {
-    --blue: #1b6ece;
+    --salad: #17f702;
     --gray: #4c5e5f;
     --shadow: rgba(0, 0, 0, 0.2);
+    --shadow2: rgba(0, 0, 0, 0.3);
 }
 
 body {
@@ -9,87 +10,160 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
-    background: rgb(182, 228, 231);
+    background: linear-gradient(45deg, white, rgb(255, 77, 77));
 }
 
 .main {
     display: flex;
-    background-color: white;
-    border-radius: 15px;
     padding: 15px;
     padding-left: 40px;
     padding-right: 40px;
-    margin-top: 5vh;
-    box-shadow: 0 10px 30px var(--shadow);
+    margin-top: 0.5vh;
     width: 90%;
-    max-width: 600px;
+    max-width: 1000px;
     max-height: 70vh;
     flex-direction: column;
+    gap: 3vh;
 }
 
 .header {
     font-style: bold;
-    font-size: 2.5em;
-    background: linear-gradient(45deg, var(--gray), var(--blue));
+    font-size: 5.0em;
+    background: rgb(206, 46, 25);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     text-align: center;
 }
 
-.song-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.platform {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    box-shadow: 0 10px 30px var(--shadow);
+    justify-content: center;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column; 
+    transition: all 0.2s ease;
 }
 
-.song-item {
-    background-color: rgb(231, 243, 248);
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px var(--shadow);
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.song-item:hover {
+.platform:hover {
     transform: translateY(-2px);
+    opacity: 0.95;
+    box-shadow: 0 10px 30px var(--shadow2);
 }
 
-.song-inside {
+.many-plats {
     flex-direction: row;
+    justify-content: center;
+    width: 100%;
     display: flex;
+    gap: 3vh;
+}
+
+.platform2 {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    height: 340px;
+    width: 100%;
+    box-shadow: 0 10px 30px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.platform2:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+    box-shadow: 0 10px 30px var(--shadow2);
+}
+
+.platform3 {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    width: 120px;
+    height: 30px;
+    box-shadow: 0 10px 30px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.2s ease;
+    text-align: center;
+}
+
+.platform3:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+    box-shadow: 0 10px 30px var(--shadow2);
+}
+
+.plat-content {
+    font-weight: bold;
+    margin: 20px;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+.plat-author {
+    color: var(--gray);
+    font-size: 1.0em;
+    text-align: center;
+    margin: 20px;
 }
 
 .image-cover {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-}
-
-.song-content {
-    font-size: 1.2em;
-    line-height: 1.4;
-    flex-direction: column;
     display: flex;
-    margin-left: 15px;
-}
-.song-content-name {
-    font-weight: bold;
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+    justify-content: right;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.2s ease;
 }
 
-.song-content-author {
-    color: var(--gray);
-    font-size: 0.8em;
+.image-cover:hover {
+    transform: translateY(-2px);
+    opacity: 0.98;
+    box-shadow: 0 10px 30px var(--shadow2);
 }
 
 .music-player {
-    width: 300px;
-    height: 50px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.some-plats {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    gap: 1vh;
+}
+
+.image-small {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    justify-content: right;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+
+.image-small:hover {
+    transform: translateY(-2px);
+    opacity: 0.98;
+    box-shadow: 0 10px 30px var(--shadow2);
 }
